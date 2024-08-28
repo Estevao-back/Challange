@@ -8,28 +8,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="app.js" defer></script>
 </head>
-<body class="bodyClass">
+<body>
     <header class="cabecalho">
         <a href="index.html"><img src="./imgs/Frame 6.png" alt="logo alura" class="logoAlura"></a>
     </header>
     <main class="conteudo">
-        <div class="conteudoEsquerda">
-            <textarea class="textoArea" wrap="hard" placeholder="Digite seu texto"></textarea>
-            <h6 class="fraseBotao">
+        <section class="conteudoEsquerda">
+            <textarea class="textoArea" wrap="hard" placeholder="Digite seu texto" id="textoArea"></textarea>
+            <div class="fraseBotao">
             <img src="./imgs/Group.png" alt="sinal de exclamação"> Apenas letras minúsculas e sem acento.
-            </h6>
-            <section class="botoes">
-                <button  onclick="criptografar()" id="botaoUm">Criptografar</button>
-                <button onclick="descriptografar()" id="botaoDois">Descriptografar</button>
-            </section>
-        </div>
-        <div class="areaMensagem">
-            <img src="imgs/High quality products 1 1.png" alt="menina observando com lupa" class="imagemMenina">
-            <p class="textoMenina">
+            </div>
+            <div class="botoes">
+                <button  onclick="criptografar()" id="botaoUm" class="botaoUm">Criptografar</button>
+                <button onclick="descriptografar()" id="botaoDois" class="botaoDois">Descriptografar</button>
+            </div>
+        </section>
+        <section class="areaMensagem" id="areaMensagem">
+            <img src="imgs/High quality products 1 1.png" alt="menina observando com lupa" class="imagemMenina" id="imagemMenina">
+            <p class="textoMenina" id="textoMenina">
               <span class="negritoFrase">Nenhuma mensagem<br> encontrada</span><br><br> Digite um texto que você deseja criptografar ou descriptografar.
             </p>
-        </div>
+            <textarea readonly name="resultado" id="resultadoMensagem" class="resultadoMensagem"></textarea>
+            <button class="botaoCopiar" id="botaoCopiar">Copiar</button>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="rodape">
+            Desenvolvido por Estêvão Petter
+        </div>
+    </footer>
 </body>
 </html>
